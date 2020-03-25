@@ -30,11 +30,13 @@ class Obj {
             try {
                 sql = 'CREATE TABLE productes (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, nom VARCHAR(50) NOT NULL, descripcio TEXT, preu INT(6), imatge VARCHAR(255))'
                 await db.promiseQuery(sql)
-                sql = 'INSERT INTO productes (nom, descripcio, preu, imatge) VALUES ("Tele", "Tele molt xula", 800, "/web/imatges/producte-1.jpg")'
+                sql = 'INSERT INTO productes (nom, descripcio, preu, imatge) VALUES ("Tenerife", "53% bajada de precio", 185, "/web/imatges/oferta-tenerife.jpg")'
                 await db.promiseQuery(sql)
-                sql = 'INSERT INTO productes (nom, descripcio, preu, imatge) VALUES ("Batidora", "Batidora molt xula", 20, "/web/imatges/producte-2.png")'
+                sql = 'INSERT INTO productes (nom, descripcio, preu, imatge) VALUES ("Nápoles", "35% bajada de precio", 170, "/web/imatges/oferta-napoles.jpg")'
                 await db.promiseQuery(sql)
-                sql = 'INSERT INTO productes (nom, descripcio, preu, imatge) VALUES ("Aspirador", "Aspirador molt xulo", 300, "/web/imatges/producte-3.jpg")'
+                sql = 'INSERT INTO productes (nom, descripcio, preu, imatge) VALUES ("Palma de Mallorca", "80% bajada de precio", 140, "/web/imatges/oferta-mallorca.jpg")'
+                await db.promiseQuery(sql)
+                sql = 'INSERT INTO productes (nom, descripcio, preu, imatge) VALUES ("Orlando", "40% bajada de precio", 269, "/web/imatges/oferta-orlando.jpg")'
                 await db.promiseQuery(sql)
             } catch (e) {
                 console.error(e)
