@@ -31,18 +31,18 @@ class ObjSeccioBackofficeUsuaris {
 
             codiHTML = codiHTML + '<table>'
             codiHTML = codiHTML + '<tr>'
-            codiHTML = codiHTML + '<td></td>'
-            codiHTML = codiHTML + '<td>Id</td>'
-            codiHTML = codiHTML + '<td>Correu</td>'
-            codiHTML = codiHTML + '<td>Nom</td>'
-            codiHTML = codiHTML + '<td>Tipus</td>'
-            codiHTML = codiHTML + '<td></td>'
+            codiHTML = codiHTML + '<td class="cabecera-tabla" style="font-weight: bold;"></td>'
+            codiHTML = codiHTML + '<td class="cabecera-tabla" style="font-weight: bold;">ID</td>'
+            codiHTML = codiHTML + '<td class="cabecera-tabla" style="font-weight: bold;">CORREO</td>'
+            codiHTML = codiHTML + '<td class="cabecera-tabla" style="font-weight: bold;">NOMBRE</td>'
+            codiHTML = codiHTML + '<td class="cabecera-tabla" style="font-weight: bold;">TIPO</td>'
+            codiHTML = codiHTML + '<td class="cabecera-tabla" style="font-weight: bold;"></td>'
             codiHTML = codiHTML + '</tr>'
             for (cntUsuari = 0; cntUsuari < navegacio.dadesSeccio.length; cntUsuari = cntUsuari + 1) {
                 valor = navegacio.dadesSeccio[cntUsuari]
                 codiHTML = codiHTML + '<tr>'
                 codiHTML = codiHTML + '<td><img src="' + valor.imatge + '" width="50" /></td>'
-                codiHTML = codiHTML + '<td>' + valor.id + '</td>'
+                codiHTML = codiHTML + '<td style="font-weight: bold;">' + '<center>' + valor.id + '</center>' + '</td>'
                 codiHTML = codiHTML + '<td>' + valor.correu + '</td>'
                 codiHTML = codiHTML + '<td>' + valor.nom + '</td>'
                 codiHTML = codiHTML + '<td>' + valor.tipus + '</td>'
@@ -56,7 +56,7 @@ class ObjSeccioBackofficeUsuaris {
             }
             codiHTML = codiHTML + '</table>'
             codiHTML = codiHTML + '</br></br>'
-            codiHTML = codiHTML + '<input type="button" value="Afegir usuari" onclick="seccioBackofficeUsuaris.mostraAfegeixUsuari()" />'
+            codiHTML = codiHTML + '<input type="button" value="CREAR UNA CUENTA" onclick="seccioBackofficeUsuaris.mostraAfegeixUsuari()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" />'
         }
 
         // Amaguem la càrrega i mostrem el llistat de productes en una taula
@@ -121,7 +121,6 @@ class ObjSeccioBackofficeUsuaris {
 
         // Amaga el botó esborra del popup
         refEsborra.style.display = 'none'
-
         popups.mostraPopup('popupBackofficeUsuaris') 
     }
 

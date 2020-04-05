@@ -4,7 +4,6 @@
 @media only screen and (max-device-width: 599px) { .desktop { display: none !important; } }
 @media only screen and (min-device-width: 600px) { .mobile  { display: none !important; } }
 .flex       { display: flex; }
-.flexColumn { flex-direction: column; }
 .none       { display: none; }
 .halfWidth  { max-width: 50%; }
 .botoIcona  { cursor: pointer; }
@@ -174,6 +173,11 @@ body > #frontendHome {
     -moz-box-shadow: 0px 0px 29px 1px rgba(0,0,0,1);
     box-shadow: 0px 0px 29px 1px rgba(0,0,0,1);
 }
+.demo-card-wide.mdl-card:hover{
+    transition: box-shadow .3s;
+    background: rgb(231, 231, 231);
+    float: left;
+}
 .demo-card-wide > .mdl-card__title {
     color: white;
     text-shadow: 1px 1px black;
@@ -241,6 +245,11 @@ body > #frontendHome {
     -webkit-border-radius: 0px 0px 18px 18px;
     border: 0px solid #000000;
 }
+.segunda-seccion-izq:hover{
+    transition: box-shadow .3s;
+    background: rgb(231, 231, 231);
+    float: left;
+}
 .fondo-izq-segunda-seccion{
     background-image: url("/web/imatges/imagen-segunda-seccion-izq.jpg");
     background-position: center;
@@ -292,6 +301,11 @@ body > #frontendHome {
     -moz-border-radius: 0px 0px 18px 18px;
     -webkit-border-radius: 0px 0px 18px 18px;
     border: 0px solid #000000;
+}
+.segunda-seccion-der:hover{
+    transition: box-shadow .3s;
+    background: rgb(231, 231, 231);
+    float: left;
 }
 .fondo-der-segunda-seccion{
     background-image: url("/web/imatges/imagen-segunda-seccion-der.jpg");
@@ -436,6 +450,21 @@ tr:nth-child(even){
     }
 }
     /*PRODUCTOS*/
+.cargando-pagina{
+    display: flex;
+    color: white;
+    font-family: "Oswald";
+    margin-top: 200px;
+    margin-left: 500px;
+}
+@media only screen and (max-device-width: 599px) {
+    #productesLoading{
+        width: auto;
+        margin-top: 200px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }  
+}
 .productesContinguts{
     flex-direction: column;
     margin: auto;
@@ -451,13 +480,14 @@ tr:nth-child(even){
     background-color: whitesmoke;
     text-align: center;
 }
-.imagen-oferta-dia{
+.div-imagen-oferta-dia{
     margin-right: 20px;
     margin-left: 20px;
 }
 .texto-oferta-dia{
     flex-direction: row; 
     display: flex;
+    margin-bottom: 20px;
 }
 .texto-oferta-dia-izq{
     text-align: left;
@@ -471,7 +501,6 @@ tr:nth-child(even){
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: grey;
 }
 .productos-oferta-del-mes{
     display: flex;
@@ -485,6 +514,11 @@ tr:nth-child(even){
     width: 100%;
     margin: 10px;
     text-align: center;
+}
+.boton-oferta:hover{
+    transition: box-shadow .3s;
+    background: rgb(231, 231, 231);
+    float: left;
 }
 .boton-compra{
     font-family: "Oswald";
@@ -507,10 +541,54 @@ tr:nth-child(even){
 }
 .letra-boton-compra {
     color: white;
+    cursor: pointer;
 }
 .letra-boton-compra:hover {  
     transform: scale(1.2);
     color: purple;
+}
+  
+@media only screen and (max-device-width: 599px) {
+    .primera-seccion-productos{
+        width: auto;
+    }
+    .div-imagen-oferta-dia{
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    .texto-oferta-dia{
+        flex-direction: column; 
+        margin-bottom: 0px;
+    }
+    .texto-oferta-dia-izq{
+        margin-right: 0px;
+    }
+    .segunda-seccion-productos{
+        width: auto;
+        text-align: center;
+    }
+    .productos-oferta-del-mes{
+        flex-direction: column;
+    }
+    .boton-oferta{
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+    .boton-compra{
+        width: auto;
+        height: 30px;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+    .boton-compra-dia{
+        width: auto;
+        height: 30px;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+    .imagen-oferta-dia{
+        height: 250px;
+    }
 }
      /*CONTACTO*/
 .contacto{
@@ -574,11 +652,6 @@ tr:nth-child(even){
     height: 600px;
 }
 @media only screen and (max-device-width: 599px) {
-    .contacto{
-        flex-direction: column;
-        margin: auto;
-        align-items: center;
-    }
     .primera-seccion-contacto{
         width: auto;
         display: flex;
@@ -636,9 +709,61 @@ tr:nth-child(even){
     left: 0;
     height: 100%;
     width: 100%;
+    z-index: 10;
 }
 #popups > div {
-    border: solid 1px black;
-    background-color: lightcyan;
+    border: solid 0px black;
+    background-color: whitesmoke;
     display: none;
+    z-index: 10;
+}
+/*CUADRO DE CREACION DE USUARIOS*/
+.flexColumn { 
+    flex-direction: column; 
+}
+.contenedor1BackofficeUsuarios{
+    margin: 10px;
+    text-align: center;
+}
+.titulobackofficeusuarios{
+    font-weight: bold;
+}
+.contenedor2BackofficeUsuarios{
+    margin: 10px;
+    background-color: white;
+}
+.contenedor3BackofficeUsuarios{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+.flex.flexrow{
+    height: 50px;
+}
+.boton-guarda-borra{
+    display: flex;
+    flex-direction: row;
+}
+.espacio-boton-guarda-borra{
+    width: 5px;
+}
+/*LISTADO DE USUARIOS*/
+#backofficeUsuarisContinguts{
+    flex-direction: column;
+    margin: auto;
+    max-width: 1900px;
+    align-items: center;
+    margin-top: 80px;
+}
+@media only screen and (max-device-width: 599px) {
+    #backofficeUsuaris{
+        width: auto;
+    }
+    #backofficeUsuarisContinguts{
+        margin-top: 20px;
+        width: auto;
+        max-width: auto;
+    }
 }

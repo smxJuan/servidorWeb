@@ -21,8 +21,8 @@ class ObjSeccioFrontendProductes {
 
         // Transformem l'objecte rebut en codi HTML
         codiHTML = codiHTML + '<div class="primera-seccion-productos">'
-            codiHTML = codiHTML + '<div class="imagen-oferta-dia">'
-                codiHTML = codiHTML + '<img src="/web/imatges/oferta-madrid.jpeg" width="100%" height="400px"/>'
+            codiHTML = codiHTML + '<div class="contenedor-imagen-oferta-dia">'
+                codiHTML = codiHTML + '<img class="imagen-oferta-dia" src="/web/imatges/oferta-madrid.jpeg" width="100%" height="460px"/>'
             codiHTML = codiHTML + '</div>'
             codiHTML = codiHTML + '<div class="texto-oferta-dia">'
                 codiHTML = codiHTML + '<div class="texto-oferta-dia-izq">'
@@ -50,7 +50,7 @@ class ObjSeccioFrontendProductes {
                         codiHTML = codiHTML + '<div>' + valor.descripcio +'</div>'
                         codiHTML = codiHTML + '<div>' + valor.preu +' € tarifa mediana</div>'
                         codiHTML = codiHTML + '<div class="boton-compra">'
-                            codiHTML = codiHTML + '<div class="letra-boton-compra" onclick="navegacio.canviaSeccio("frontendHome")">Comprar</div>'
+                            codiHTML = codiHTML + '<div class="letra-boton-compra" onclick="navegacio.canviaSeccio(frontendPresentacio)">Comprar</div>'
                         codiHTML = codiHTML + '</div>'
                     codiHTML = codiHTML + '</div>'
                 }

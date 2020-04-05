@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap'>
         <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+        <link rel='stylesheet' href='https://code.getmdl.io/1.3.0/material.teal-orange.min.css'>
         <link rel='stylesheet' href='https://code.getmdl.io/1.3.0/material.indigo-pink.min.css'>
         <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -24,12 +25,12 @@
             <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendHome")'>
                 <i class="material-icons">airplanemode_active</i>
             </div>
-            <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendPresentacio")'>Presentació</div>
-            <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendProductes")'>Productes</div>
-            <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendContacte")'>Contacte</div>
+            <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendPresentacio")'>Presentación</div>
+            <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendProductes")'>Productos</div>
+            <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendContacte")'>Contacto</div>
             <div id='botoLoginWeb' class='botoMenu' onclick='popups.mostraPopup("popupLogin")'>Login</div>
-            <div id='botoGestioUsuarisWeb' class='botoMenu none' onclick='navegacio.canviaSeccio("backofficeUsuaris")'>Gestió usuaris</div>
-            <div id='botoGestioProductesWeb' class='botoMenu none' onclick='navegacio.canviaSeccio("backofficeProductes")'>Gestió productes</div>
+            <div id='botoGestioUsuarisWeb' class='botoMenu none' onclick='navegacio.canviaSeccio("backofficeUsuaris")'>Gestion Usuarios</div>
+            <div id='botoGestioProductesWeb' class='botoMenu none' onclick='navegacio.canviaSeccio("backofficeProductes")'>Gestion Productos</div>
             <div id='botoLogoutWeb' class='botoMenu none' onclick='login.tancaLaSessio()'>Sortir</div>
         </div>
         <!--MOBILE-->
@@ -39,14 +40,14 @@
         </div> 
         <div id='frontendMenuMobile' class='flexColumn mobile' ontouchend='amagaMenu(event)'>
             <div id='menuContainer'>
-                <div ontouchend='navegacio.canviaSeccio("frontendHome")'>Inici</div>
-                <div ontouchend='navegacio.canviaSeccio("frontendPresentacio")'>Presentació</div>
-                <div ontouchend='navegacio.canviaSeccio("frontendProductes")'>Productes</div>
-                <div ontouchend='navegacio.canviaSeccio("frontendContacte")'>Contacte</div>
+                <div ontouchend='navegacio.canviaSeccio("frontendHome")'>Inicio</div>
+                <div ontouchend='navegacio.canviaSeccio("frontendPresentacio")'>Presentación</div>
+                <div ontouchend='navegacio.canviaSeccio("frontendProductes")'>Productos</div>
+                <div ontouchend='navegacio.canviaSeccio("frontendContacte")'>Contacto</div>
                 <div id='botoLoginMobil' ontouchend='popups.mostraPopup("popupLogin")'>Login backoffice</div>
             </div>
-            <div id='botoGestioUsuarisMobil' class='botoMenu none' onclick='navegacio.canviaSeccio("backofficeUsuaris")'>Gestió usuaris</div>
-            <div id='botoGestioProductesMobil' class='botoMenu none' onclick='navegacio.canviaSeccio("backofficeProductes")'>Gestió productes</div>
+            <div id='botoGestioUsuarisMobil' class='botoMenu none' onclick='navegacio.canviaSeccio("backofficeUsuaris")'>Gestion Usuarios</div>
+            <div id='botoGestioProductesMobil' class='botoMenu none' onclick='navegacio.canviaSeccio("backofficeProductes")'>Gestion Productos</div>
             <div id='botoLogoutMobil' class='botoMenu none' onclick='login.tancaLaSessio()'>Sortir</div>
         </div>
         <!--HOME-->
@@ -58,7 +59,7 @@
                 </div>
                 <div class="oferta-semana">
                     <!--CARTA SEMANAL-->
-                    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                    <div class="demo-card-wide mdl-card mdl-shadow--2dp" onclick='navegacio.canviaSeccio("frontendProductes")'>
                         <div class="mdl-card__title">
                           <h2 class="mdl-card__title-text">Vuelos BCN - MAD por solo 50€</h2>
                         </div>
@@ -67,24 +68,19 @@
                         conocer la capital de España, por tan solo 50€, no te lo pierdas!!
                         </div>
                         <div class="mdl-card__actions mdl-card--border">
-                          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onclick='navegacio.canviaSeccio("frontendProductes")'>
+                          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                             <b>¡Vamos!</b> 
                           </a>
-                        </div>
-                        <div class="mdl-card__menu">
-                          <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-                            <i class="material-icons">share</i>
-                          </button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="segunda-seccion">
             <!--SEGUNDA SECCION-IZQ-->
-                <div class="segunda-seccion-izq">
+                <div class="segunda-seccion-izq" onclick='navegacio.canviaSeccio("frontendProductes")'>
                     <div class="fondo-izq-segunda-seccion"></div>
                         <div class="enunciado-izq-segunda-seccion">
-                            <div class='boton-oferta-coche' onclick='navegacio.canviaSeccio("frontendProductes")'>¿Quieres alquilar un coche?</div>
+                            <div class='boton-oferta-coche'>¿Quieres alquilar un coche?</div>
                                 <div class="texto-oferta-coche">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                     Dicta earum ullam error eius culpa praesentium accusamus, dolore sit, accusantium 
                                     necessitatibus impedit eveniet cumque explicabo omnis ab assumenda 
@@ -95,10 +91,10 @@
             <!--esta barra la he hecho ya que, al momento de hacer la pagina movil me da muchos errores si la hago padding, marging, etc-->
                 <div class="barra-intermedia"></div>
             <!--SEGUNDA SECCION-DER-->
-                <div class="segunda-seccion-der">
+                <div class="segunda-seccion-der" onclick='navegacio.canviaSeccio("frontendProductes")'>
                     <div class="fondo-der-segunda-seccion"></div>
                         <div class="enunciado-der-segunda-seccion">
-                            <div class='boton-oferta-coche' onclick='navegacio.canviaSeccio("frontendProductes")'>¿Donde te quedaras?</div>
+                            <div class='boton-oferta-coche'>¿Donde te quedaras?</div>
                                 <div class="texto-oferta-coche">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                     Dicta earum ullam error eius culpa praesentium accusamus, dolore sit, accusantium 
                                     necessitatibus impedit eveniet cumque explicabo omnis ab assumenda 
@@ -214,7 +210,9 @@
         </div>
             <!--PRODUCTOS-->
         <div id='frontendProductes'>
-            <div id='productesLoading'>Carregant productes ...</div>
+            <div id='productesLoading' class="cargando-pagina">
+                <h3><center>Buscando Ofertas ...</center></h3>
+            </div>
             <div id='productesContinguts' class='productesContinguts'></div>
         </div>
             <!--CONTACTO-->
@@ -252,49 +250,85 @@
             </div>
         </div>
         <div id='backofficeUsuaris'>
-            <div id='backofficeUsuarisLoading'>Carregant usuaris ...</div>
             <div id='backofficeUsuarisContinguts' class='flexColumn'></div>
+            <div id='backofficeUsuarisLoading' class="cargando-pagina">
+                <h3><center>Cargando Usuarios ...</center></h3>
+            </div>
         </div>
         <div id='backofficeProductes'>
             Pàgina per fer la gestió dels productes
         </div>
         <div id='popups' onclick='popups.amagaAmbClick(event)'>
+            <!--LOGUEO DE USUARIOS-->
             <div id='popupLogin' class='flexColumn'>
-                <div>Email:</div>
-                <input id='loginCorreu' type='text' class='halfWidth' />
-                <div>Codi:</div>
-                <input id='loginCodi' type='password' class='halfWidth' />
-                <br/>
-                <input type='button' value='entra' class='halfWidth' onclick='login.autenticaAmbFormulari()' />
-                <div id='loginLoading' class='none'>Carregant ...</div>
-                <div id='loginError' class='none'>Error al fer login ...</div>
-            </div>
-            <div id='popupBackofficeUsuaris' class='flexColumn'>
-                <div>Id:</div>
-                <div id='backofficeUsuarisId'></div>
-                <div>Correu:</div>
-                <input id='backofficeUsuarisCorreu' type='text' value=''/>
-                <div>Nom:</div>
-                <input id='backofficeUsuarisNom' type='text' value=''/>
-                <div>Tipus:</div>
-                <select id='backofficeUsuarisTipus'>
-                    <option>admin</option>
-                    <option>normal</option>
-                </select>
-                <div>Codi:</div>
-                <input id='backofficeUsuarisCodi' type='text' value=''/>
-                <div>Imatge:</div>
-                <div class='flex flexRow'>
-                    <img id='backofficeUsuarisImg' src='/web/imatges/transparent.png' width='100'/>
-                    <input id='backofficeUsuarisArxiu' class="dropFile" accept="image/*" type="file" onchange="seccioBackofficeUsuaris.mostraImatge()" />
+                <div class="contenedor1BackofficeUsuarios">
+                    <h4 class="tituloBackofficeUsuarios">Iniciar Sesión</h4>
+                    <div class="contenedor2BackofficeUsuarios">
+                        <div class="contenedor3BackofficeUsuarios">
+                            <div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
+                                <input class='mdl-textfield__input' type='text' id='loginCorreu' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                                <label class='mdl-textfield__label' for='loginCorreu'>CORREO ELECTRÓNICO</label>
+                                <span class="mdl-textfield__error">No és un format de correu vàlid</span>
+                            </div>
+                            <div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
+                                <input class='mdl-textfield__input' type='text' id='loginCodi'>
+                                <label class='mdl-textfield__label' for='loginCodi'>CONTRASEÑA</label>
+                            </div>
+                            <br/>
+                            <div class="boton-guarda-borra">
+                                <input type='button' value='Entrar' onclick='login.autenticaAmbFormulari()' class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored'/>
+                            </div>
+                            <div id='loginLoading' class='none'>Carregant ...</div>
+                            <div id='loginError' class='none'>Error al fer login ...</div>
+                        </div>
+                    </div>
                 </div>
-                
-                <br/>
-                <input type='button' value='Guarda' onclick='seccioBackofficeUsuaris.guardaDadesUsuariAlServidor()'/>
-                <br/>
-                <input id='backofficeUsuarisBotoEsborra' type='button' value='Esborra l&#39;usuari' onclick='seccioBackofficeUsuaris.esborraUsuariDelServidor()' />
-                <div id='backofficeUsuarisPopupLoading' class='none'>Carregant ...</div>
-                <div id='backofficeUsuarisPopupError' class='none'>Error al guardar les dades ...</div>
+            </div>
+            <!--CREACION DE CUENTAS-->
+            <div id='popupBackofficeUsuaris' class='flexColumn'>
+                <div class="contenedor1BackofficeUsuarios">
+                    <h4 class="tituloBackofficeUsuarios">CREA UNA CUENTA</h4>
+                    <div class="contenedor2BackofficeUsuarios">
+                        <div class="contenedor3BackofficeUsuarios">
+                            <div id='backofficeUsuarisId'></div>
+                            <div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
+                                <input class='mdl-textfield__input' type='text' id='backofficeUsuarisCorreu' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                                <label class='mdl-textfield__label' for='backofficeUsuarisCorreu'>CORREO ELECTRÓNICO</label>
+                                <span class="mdl-textfield__error">No és un format de correu vàlid</span>
+                            </div>
+                            <div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
+                                <input class='mdl-textfield__input' type='text' id='backofficeUsuarisNom' pattern="[^0-9]*">
+                                <label class='mdl-textfield__label' for='backofficeUsuarisNom'>NOMBRE</label>
+                                <span class="mdl-textfield__error">El nom només pot contenir lletres</span>
+                            </div>
+                            <div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
+                                <input class='mdl-textfield__input' type='text' id='backofficeUsuarisCodi'>
+                                <label class='mdl-textfield__label' for='backofficeUsuarisCodi'>CONTRASEÑA</label>
+                            </div>
+                            <div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
+                                <label class='mdl-textfield__label' for='octane'>TIPO DE CUENTA</label>
+                                <select class='mdl-textfield__input' id='backofficeUsuarisTipus'>
+                                    <option>admin</option>
+                                    <option>Normal</option>
+                                </select>
+                            </div>
+                            <div style="color:rgb(63,81,181)">IMAGEN:</div>
+                            <br/>
+                            <div class='flex flexRow'>
+                                <img id='backofficeUsuarisImg' src='/web/imatges/transparent.png' width='100' height='100'/>
+                                <input id='backofficeUsuarisArxiu' class="dropFile" accept="image/*" type="file" onchange="seccioBackofficeUsuaris.mostraImatge()" />
+                            </div>
+                            <br/>
+                            <div class="boton-guarda-borra">
+                                <input type='button' value='Guardar' onclick='seccioBackofficeUsuaris.guardaDadesUsuariAlServidor()' class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored'/>
+                                <div class="espacio-boton-guarda-borra"></div>
+                                <input id='backofficeUsuarisBotoEsborra' type='button' value='BORRAR' onclick='seccioBackofficeUsuaris.esborraUsuariDelServidor()' class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored'/>
+                            </div>
+                            <div id='backofficeUsuarisPopupLoading' class='none'>Cargando ...</div>
+                            <div id='backofficeUsuarisPopupError' class='none'>Error al guardar les dades ...</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
