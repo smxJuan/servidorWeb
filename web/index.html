@@ -29,9 +29,9 @@
             <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendProductes")'>Productos</div>
             <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendContacte")'>Contacto</div>
             <div id='botoLoginWeb' class='botoMenu' onclick='popups.mostraPopup("popupLogin")'>Login</div>
-            <div id='botoGestioUsuarisWeb' class='botoMenu none' onclick='navegacio.canviaSeccio("backofficeUsuaris")'>Gestion Usuarios</div>
-            <div id='botoGestioProductesWeb' class='botoMenu none' onclick='navegacio.canviaSeccio("backofficeProductes")'>Gestion Productos</div>
-            <div id='botoLogoutWeb' class='botoMenu none' onclick='login.tancaLaSessio()'>Sortir</div>
+            <div id='botoGestioUsuarisWeb' class='botoMenu none' onclick='navegacio.canviaSeccio("backofficeUsuaris")'>Gestión Usuarios</div>
+            <div id='botoGestioProductesWeb' class='botoMenu none' onclick='navegacio.canviaSeccio("backofficeProductes")'>Gestión Productos</div>
+            <div id='botoLogoutWeb' class='botoMenu none' onclick='login.tancaLaSessio()'>Cerrar Sesión</div>
         </div>
         <!--MOBILE-->
         <div class="logoMenuWeb-mobile" onclick="mostraMenu()">
@@ -44,11 +44,11 @@
                 <div ontouchend='navegacio.canviaSeccio("frontendPresentacio")'>Presentación</div>
                 <div ontouchend='navegacio.canviaSeccio("frontendProductes")'>Productos</div>
                 <div ontouchend='navegacio.canviaSeccio("frontendContacte")'>Contacto</div>
-                <div id='botoLoginMobil' ontouchend='popups.mostraPopup("popupLogin")'>Login backoffice</div>
+                <div id='botoLoginMobil' ontouchend='popups.mostraPopup("popupLogin")'>Login</div>
+                <div id='botoGestioUsuarisMobil' onclick='navegacio.canviaSeccio("backofficeUsuaris")'>Gestión Usuarios</div>
+                <div id='botoGestioProductesMobil' onclick='navegacio.canviaSeccio("backofficeProductes")'>Gestión Productos</div>
+                <div id='botoLogoutMobil' onclick='login.tancaLaSessio()'>Cerrar Sesión</div>
             </div>
-            <div id='botoGestioUsuarisMobil' class='botoMenu none' onclick='navegacio.canviaSeccio("backofficeUsuaris")'>Gestion Usuarios</div>
-            <div id='botoGestioProductesMobil' class='botoMenu none' onclick='navegacio.canviaSeccio("backofficeProductes")'>Gestion Productos</div>
-            <div id='botoLogoutMobil' class='botoMenu none' onclick='login.tancaLaSessio()'>Sortir</div>
         </div>
         <!--HOME-->
         <div id='frontendHome' class="home">
@@ -250,8 +250,8 @@
             </div>
         </div>
         <div id='backofficeUsuaris'>
-            <div id='backofficeUsuarisContinguts' class='flexColumn'></div>
-            <div id='backofficeUsuarisLoading' class="cargando-pagina">
+            <div id='backofficeUsuarisContinguts'></div>
+            <div id='backofficeUsuarisLoading'>
                 <h3><center>Cargando Usuarios ...</center></h3>
             </div>
         </div>
@@ -268,7 +268,7 @@
                             <div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
                                 <input class='mdl-textfield__input' type='text' id='loginCorreu' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
                                 <label class='mdl-textfield__label' for='loginCorreu'>CORREO ELECTRÓNICO</label>
-                                <span class="mdl-textfield__error">No és un format de correu vàlid</span>
+                                <span class="mdl-textfield__error">No es un formato de correo válido</span>
                             </div>
                             <div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
                                 <input class='mdl-textfield__input' type='text' id='loginCodi'>
@@ -278,8 +278,8 @@
                             <div class="boton-guarda-borra">
                                 <input type='button' value='Entrar' onclick='login.autenticaAmbFormulari()' class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored'/>
                             </div>
-                            <div id='loginLoading' class='none'>Carregant ...</div>
-                            <div id='loginError' class='none'>Error al fer login ...</div>
+                            <div id='loginLoading' class='none'>Cargando ...</div>
+                            <div id='loginError' class='none'>Error al hacer login ...</div>
                         </div>
                     </div>
                 </div>
@@ -314,7 +314,7 @@
                             </div>
                             <div style="color:rgb(63,81,181)">IMAGEN:</div>
                             <br/>
-                            <div class='flex flexRow'>
+                            <div class='upload-files'>
                                 <img id='backofficeUsuarisImg' src='/web/imatges/transparent.png' width='100' height='100'/>
                                 <input id='backofficeUsuarisArxiu' class="dropFile" accept="image/*" type="file" onchange="seccioBackofficeUsuaris.mostraImatge()" />
                             </div>

@@ -739,9 +739,6 @@ tr:nth-child(even){
     align-items: center;
     z-index: 10;
 }
-.flex.flexrow{
-    height: 50px;
-}
 .boton-guarda-borra{
     display: flex;
     flex-direction: row;
@@ -750,12 +747,27 @@ tr:nth-child(even){
     width: 5px;
 }
 /*LISTADO DE USUARIOS*/
-#backofficeUsuarisContinguts{
+#backofficeUsuaris{
     flex-direction: column;
     margin: auto;
     max-width: 1900px;
     align-items: center;
+}
+#backofficeUsuarisContinguts{
     margin-top: 80px;
+    flex-direction: column;
+}
+#backofficeUsuarisLoading{
+    display: flex;
+    color: white;
+    font-family: "Oswald";
+    margin-top: 200px;
+}
+.cabecera-tabla-nomobil{
+    border: 1px solid black;
+    background-color: grey;
+    color: white;
+    text-align: center;
 }
 @media only screen and (max-device-width: 599px) {
     #backofficeUsuaris{
@@ -764,6 +776,14 @@ tr:nth-child(even){
     #backofficeUsuarisContinguts{
         margin-top: 20px;
         width: auto;
-        max-width: auto;
+    }
+    table{
+        width: auto;
+    }
+    .cabecera-tabla-nomobil{
+        display: none;
+    }
+    .td-nomobil{
+        display: none;
     }
 }
