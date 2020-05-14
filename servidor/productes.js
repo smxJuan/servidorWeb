@@ -30,7 +30,7 @@ class Obj {
             try {
                 sql = 'CREATE TABLE productes (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, nom VARCHAR(50) NOT NULL, descripcio TEXT, preu INT(6), imatge VARCHAR(255))'
                 await db.promiseQuery(sql)
-                sql = 'INSERT INTO productes (nom, descripcio, preu, imatge) VALUES ("Tenerife", "53% bajada de precio", 185, "/web/imatges/oferta-tenerife.jpg")'
+                sql = 'INSERT INTO productes (nom, descripcio, preu, imatge) VALUES ("Colombia", "53% bajada de precio", 185, "/web/imatges/oferta-tenerife.jpg")'
                 await db.promiseQuery(sql)
                 sql = 'INSERT INTO productes (nom, descripcio, preu, imatge) VALUES ("Nápoles", "35% bajada de precio", 170, "/web/imatges/oferta-napoles.jpg")'
                 await db.promiseQuery(sql)
@@ -45,13 +45,23 @@ class Obj {
         }
     
         // Demana la informació de productes
-        try {
-            sql = 'SELECT * FROM productes'
-            taula = await db.promiseQuery(sql)
-        } catch (e) {
-            console.error(e)
-            return result.json({ resultat: "ko", missatge: "Error, funció llistatProductes: ha fallat la crida a les dades"})  
-        }   
+        if (data.id) {
+            try {
+                sql = 'SELECT * FROM productes WHERE id=' + data.id
+                taula = await db.promiseQuery(sql)
+            } catch (e) {
+                console.error(e)
+                return result.json({ resultat: "ko", missatge: "Error, funció llistatProductes: ha fallat la crida a les dades"})  
+            }
+        } else {
+            try {
+                sql = 'SELECT * FROM productes'
+                taula = await db.promiseQuery(sql)
+            } catch (e) {
+                console.error(e)
+                return result.json({ resultat: "ko", missatge: "Error, funció llistatProductes: ha fallat la crida a les dades"})  
+            }
+        } 
     
         // Si hem aconseguit dades corectament, tornem la taula resultant
         if (typeof taula === 'object' && typeof taula.length === 'number') {

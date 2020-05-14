@@ -16,9 +16,9 @@ class Obj {
     // Configura aquí la connexió amb la base de dades
     constructor () {
 
-        this.host           = '127.0.0.1'
+        this.host           = "127.0.0.1"
         this.port           = 3306
-        this.db             = 'serverDB'
+        this.db             = 'serverDB' 
         this.usr            = 'user'
         this.pwd            = '8ase2pwd'
         this.pool           = null

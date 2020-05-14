@@ -465,7 +465,7 @@ tr:nth-child(even){
         margin-right: 100px;
     }  
 }
-.productesContinguts{
+#productesContinguts{
     flex-direction: column;
     margin: auto;
     max-width: 1900px;
@@ -746,7 +746,7 @@ tr:nth-child(even){
 .espacio-boton-guarda-borra{
     width: 5px;
 }
-/*LISTADO DE USUARIOS*/
+/*LISTADO DE USUARIOSS*/
 #backofficeUsuaris{
     flex-direction: column;
     margin: auto;
