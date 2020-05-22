@@ -16,7 +16,7 @@
         <script src='/web/script-popups.js'></script>
         <script src='/web/script-seccio-backofficeusuaris.js'></script>
         <script src='/web/script-seccio-frontendproductes.js'></script>
-        <script src='/web/script-seccio-frontendproducte'></script>
+        <script src='/web/script-seccio-frontendproducte.js'></script>
         <script src='/web/script-utils.js'></script>
         <script src='/web/script.js'></script>
     </head>
@@ -27,7 +27,7 @@
                 <i class="material-icons">airplanemode_active</i>
             </div>
             <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendPresentacio")'>Presentación</div>
-            <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendProductes")'>Productos</div>
+            <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendProductes")'>Destinos</div>
             <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendContacte")'>Contacto</div>
             <div id='botoLoginWeb' class='botoMenu' onclick='popups.mostraPopup("popupLogin")'>Login</div>
             <div id='botoGestioUsuarisWeb' class='botoMenu none' onclick='navegacio.canviaSeccio("backofficeUsuaris")'>Gestión Usuarios</div>
@@ -43,7 +43,7 @@
             <div id='menuContainer'>
                 <div ontouchend='navegacio.canviaSeccio("frontendHome")'>Inicio</div>
                 <div ontouchend='navegacio.canviaSeccio("frontendPresentacio")'>Presentación</div>
-                <div ontouchend='navegacio.canviaSeccio("frontendProductes")'>Productos</div>
+                <div ontouchend='navegacio.canviaSeccio("frontendProductes")'>Destinos</div>
                 <div ontouchend='navegacio.canviaSeccio("frontendContacte")'>Contacto</div>
                 <div id='botoLoginMobil' ontouchend='popups.mostraPopup("popupLogin")'>Login</div>
                 <div id='botoGestioUsuarisMobil' onclick='navegacio.canviaSeccio("backofficeUsuaris")'>Gestión Usuarios</div>
@@ -212,15 +212,16 @@
             <!--PRODUCTOS-->
         <div id='frontendProductes'>
             <div id='productesLoading' class="cargando-pagina">
-                <h3><center>Buscando Ofertas ...</center></h3>
+                <h3 class="letras-centradas-cargando">Buscando Ofertas ...</h3>
             </div>
             <div id='productesContinguts'></div>
         </div>
+            <!--PRODUCTO POR SEPARADO-->
         <div id='frontendProducte'>
-            <div id='productesLoading' class="cargando-pagina">
-                <h3><center>Buscando Ofertas ...</center></h3>
+            <div id='producteLoading' class="cargando-pagina">
+                <h3 class="letras-centradas-cargando">Buscando Ofertas ...</h3>
             </div>
-            <div id='productesContinguts'></div>
+            <div id='producteContinguts'></div>
         </div>
             <!--CONTACTO--> 
         <div id='frontendContacte' class="contacto">
@@ -256,10 +257,11 @@
                 </div>
             </div>
         </div>
+        <!--USUARIOS-->
         <div id='backofficeUsuaris'>
             <div id='backofficeUsuarisContinguts'></div>
             <div id='backofficeUsuarisLoading'>
-                <h3><center>Cargando Usuarios ...</center></h3>
+                <h3 class="letras-centradas-cargando">Cargando Usuarios ...</h3>
             </div>
         </div>
         <div id='backofficeProductes'>

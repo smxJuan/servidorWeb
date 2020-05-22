@@ -33,7 +33,7 @@ class ObjSeccioFrontendProductes {
                     codiHTML = codiHTML +  '<p>¡OFERTA DE LA SEMANA! Aprovecha esta gran oportunidad, de conocer la capital de España, por tan solo 50€, no te lo pierdas!!<p>'
                     codiHTML = codiHTML + '<div class="boton-compra-dia">'
                             codiHTML = codiHTML + '<div class="letra-boton-compra">Comprar</div>'
-                        codiHTML = codiHTML + '</div>'
+                    codiHTML = codiHTML + '</div>'
                 codiHTML = codiHTML + '</div>'
             codiHTML = codiHTML + '</div>'
         codiHTML = codiHTML + '</div>'
@@ -55,7 +55,7 @@ class ObjSeccioFrontendProductes {
                     codiHTML = codiHTML + '</div>'
                 }
             }
-        codiHTML = codiHTML + '</div>'
+            codiHTML = codiHTML + '</div>'
         codiHTML = codiHTML + '</div>'
         
         // Amaguem la càrrega i mostrem el llistat de productes
